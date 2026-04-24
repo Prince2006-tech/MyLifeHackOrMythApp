@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@color/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to My Life Hack or Myth!"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_500"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test your common sense and learn real life hacks vs urban myths."
+        android:textSize="16sp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:textColor="#555555"/>
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/purple_500"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="12dp"/>
+
+</LinearLayout>
