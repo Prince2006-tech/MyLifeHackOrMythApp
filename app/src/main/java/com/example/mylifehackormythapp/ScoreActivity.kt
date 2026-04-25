@@ -21,30 +21,23 @@ class ScoreActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_score)
 
-        // Removed ViewCompat.setOnApplyWindowInsetsListener that tried to cast
-        // android.R.id.content to LinearLayout (which it is not), to avoid ClassCastException.
+        // WindowInsets listener removed to prevent ClassCastException
+        // (android.R.id.content is not a LinearLayout)
 
-        //ViewCompat.setOnApplyWindowInsetsListener(findViewById(android.R.id.content)) { _, insets ->
-            //val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-           // findViewById<LinearLayout>(android.R.id.content).setPadding(
-            //    systemBars.left,
-               // systemBars.top,
-             //   systemBars.right,
-               // systemBars.bottom
-           // )
-           // insets
-       // }
-
+        // Initialize UI elements from layout XML
         tvScoreResult = findViewById(R.id.tvScoreResult)
         tvScoreFeedback = findViewById(R.id.tvScoreFeedback)
         btnReview = findViewById(R.id.btnReview)
 
-        val score = intent.getIntExtra("score", 0)
-        val total = intent.getIntExtra("total", 0)
+        // Retrieve score and total questions passed from QuizActivity
+        val score = intent.getIntExtra("score", 0) // Default 0 if missing
+        val total = intent.getIntExtra("total", 0) // Default 0 if missing
 
+        // Display raw score
         val resultText = "You got $score out of $total correct!"
         tvScoreResult.text = resultText
 
+        // Tiered feedback based on performance percentage
         val feedback = when {
             score >= total - 1 -> "Master Hacker!"
             score >= total * 0.5 -> "Pretty sharp! Keep going."
@@ -52,6 +45,7 @@ class ScoreActivity : AppCompatActivity() {
         }
         tvScoreFeedback.text = feedback
 
+        // Navigate to ReviewActivity for answer explanations
         btnReview.setOnClickListener {
             val intent = Intent(this, ReviewActivity::class.java)
             startActivity(intent)

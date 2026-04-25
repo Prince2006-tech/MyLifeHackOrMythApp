@@ -5,12 +5,20 @@ import android.view.LayoutInflater
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-
+import android.widget.Button
+import android.content.Intent
 class ReviewActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_review)
+
+        val btnRetry: Button = findViewById(R.id.btnRetry)
+        btnRetry.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()  // Optional: closes current screen to prevent back stack issues
+        }
 
         val container = findViewById<LinearLayout>(R.id.containerReviews)
 

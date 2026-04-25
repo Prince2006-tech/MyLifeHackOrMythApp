@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, QuizActivity::class.java))
         }
 
-        // Fix: add explicit type for Android 13+ / strict inference.
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(android.R.id.content)) { view, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             (view as ViewGroup).setPadding(

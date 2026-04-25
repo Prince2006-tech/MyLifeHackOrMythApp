@@ -14,6 +14,16 @@
         android:textStyle="bold"
         android:layout_marginBottom="16dp"/>
 
+    <Button
+        android:id="@+id/btnRetry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:text="Retry"
+        android:textSize="18sp"
+        android:backgroundTint="#4CAF50" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"

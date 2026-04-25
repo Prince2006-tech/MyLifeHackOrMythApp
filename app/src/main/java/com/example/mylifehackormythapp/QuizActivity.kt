@@ -13,6 +13,7 @@ import android.widget.LinearLayout
 import android.util.Log
 class QuizActivity : AppCompatActivity() {
 
+    // UI element references for efficient access
     private lateinit var tvStatement: TextView
     private lateinit var tvFeedback: TextView
     private lateinit var btnHack: Button
@@ -49,43 +50,36 @@ class QuizActivity : AppCompatActivity() {
         )
     }
 
+    // Tracks current question position and user score
     private var currentIndex = 0
     private var score = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //enableEdgeToEdge()
+        //enableEdgeToEdge()  // Disabled for compatibility
         setContentView(R.layout.activity_quiz)
-    // Removed ViewCompat.setOnApplyWindowInsetsListener that tried to cast
-    // android.R.id.content to LinearLayout (which it is not), to avoid ClassCastException.
+        // Removed problematic WindowInsets listener that caused ClassCastException
 
-       // ViewCompat.setOnApplyWindowInsetsListener(findViewById(android.R.id.content)) { _, insets ->
-           // val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-          //  findViewById<LinearLayout>(android.R.id.content).setPadding(
-             //   systemBars.left,
-              //  systemBars.top,
-             //   systemBars.right,
-              //  systemBars.bottom
-          //  )
-           // insets
-      //  }
-
+        // Bind UI elements from layout
         tvStatement = findViewById(R.id.tvStatement)
         tvFeedback = findViewById(R.id.tvFeedback)
         btnHack = findViewById(R.id.btnHack)
         btnMyth = findViewById(R.id.btnMyth)
         btnNext = findViewById(R.id.btnNext)
 
+        // Load first question
         showCurrentQuestion()
-
+        // Set answer button listeners
         btnHack.setOnClickListener { checkAnswer(true) }
         btnMyth.setOnClickListener { checkAnswer(false) }
 
+        // Next button advances quiz or ends it
         btnNext.setOnClickListener {
             currentIndex++
             if (currentIndex < questions.size) {
                 showCurrentQuestion()
             } else {
+                // Quiz complete - send score to ScoreActivity
                 Log.d("Quiz", "End of quiz; launching ScoreActivity")
                 val intent = Intent(this, ScoreActivity::class.java)
                 intent.putExtra("score", score)
@@ -111,11 +105,13 @@ class QuizActivity : AppCompatActivity() {
         btnMyth.isEnabled = false
         btnNext.isEnabled = true
 
+        // Correct answer
         if (userChoice == question.isHack) {
             tvFeedback.setTextColor(Color.GREEN)
             tvFeedback.text = "✅ Correct! That's a real time‑saver!"
             score++
         } else {
+            // Incorrect answer
             tvFeedback.setTextColor(Color.RED)
             tvFeedback.text = "❌ Wrong! That's just an urban myth."
         }
