@@ -19,8 +19,8 @@ Users are presented with a series of statements and must decide whether each one
 The app provides instant feedback, tracks performance, and displays a final score with personalised feedback.
 
 
-| Quiz Screen | Score Screen | Review Screen |
-|-------------|--------------|---------------|
+| Quiz Screen | Score Screen | 
+|-------------|--------------|
 | ![Quiz](quiz.png) | ![Score](score.png) |
 ---
 
