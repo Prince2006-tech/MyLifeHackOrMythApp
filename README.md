@@ -1,5 +1,5 @@
 # MyLifeHackOrMythApp
-
+STUDENT NUMBER: ST10527400
 ##  Project Purpose
 
 This Android application was developed to address the common challenge faced by first-year university students in distinguishing practical life hacks from misleading urban myths circulating online.
@@ -125,6 +125,8 @@ Youtube video link: https://youtu.be/pGRewxut-Pw
 
 * Stack Overflow (2018) *Why Android Studio emulator is extremely slow?*
   https://stackoverflow.com/questions/52600963/why-android-studio-emulator-is-extremely-slow
+
+  STUDENT NUMBER: ST10527400
 
 ---
 
