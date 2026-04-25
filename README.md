@@ -21,7 +21,7 @@ The app provides instant feedback, tracks performance, and displays a final scor
 
 | Quiz Screen | Score Screen | Review Screen |
 |-------------|--------------|---------------|
-| ![Quiz](quiz.png) | ![Score](score.png) | ![Review](review.png) |
+| ![Quiz](quiz.png) | ![Score](score.png) |
 ---
 
 ##  Features
