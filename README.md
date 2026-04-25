@@ -9,7 +9,7 @@ This Android application was developed to address the common challenge faced by 
 
 ##  Application Overview
 
-**MyLifeHackOrMythApp** is an interactive flashcard-style quiz that helps users test their ability to identify real-life productivity hacks versus common myths.
+**MyLifeHackOrMythApp** is an interactive flashcard-style quiz that helps users test their knowledge to identify real-life productivity hacks versus common myths.
 
 Users are presented with a series of statements and must decide whether each one is:
 
@@ -44,22 +44,11 @@ The app provides instant feedback, tracks performance, and displays a final scor
 
 ---
 
-###  Core Functionality
 
-* Sequential quiz with multiple questions
-* Real-time feedback on answers
-* Score tracking system
-* Final results with performance-based feedback
-* Review mode with explanations
-* Restart/Retry functionality
-
----
-
-##  Application Logic
 
 ### Welcome Screen Logic
 
-* When the user clicks **Start**, they are navigated to the Flashcard Question Screen.
+* When the user clicks **Start**, they are taken directly to the Flashcard Question Screen.
 
 ### Flashcard Question Logic
 
@@ -73,41 +62,16 @@ The app provides instant feedback, tracks performance, and displays a final scor
 
 ### Score Screen Logic
 
-* Final score is calculated after last question
-* Feedback is displayed based on performance
-* User can:
+* The final score is calculated after the last question
+* Your feedback is displayed based on performance
+* User's are able to:
 
-  * Review answers
+  * Review their answers
   * Restart the quiz
 
 ---
 
-##  Technical Implementation
 
-* Developed using **Kotlin** in **Android Studio**
-* Uses **Activity-based architecture**
-* Navigation handled via **Intents**
-* Data managed using a **data class for questions**
-* Conditional logic used for scoring and feedback
-* Edge-to-edge UI design implemented
-
----
-
-##  Installation & Setup
-
-```bash
-git clone https://github.com/Prince2006-tech/MyLifeHackOrMythApp.git
-```
-
-1. Open **Android Studio**
-2. Select: `Open → MyLifeHackOrMythApp`
-3. Allow **Gradle Sync** to complete
-4. Run the app on:
-
-   * Emulator OR
-   * Physical device (API 24+)
-
----
 
 ##  Testing
 
@@ -117,10 +81,10 @@ The following were verified:
 
 * Navigation between screens works correctly
 * All questions display properly
-* Feedback messages are accurate
+* Feedback messages are ok
 * Score calculation is correct
-* Retry functionality works
-* App handles screen rotation properly
+* Retry button works
+* All buttons are functional
 
 ### Automated Testing
 
@@ -131,17 +95,7 @@ The following were verified:
 
 ---
 
-##  Version Control (GitHub)
 
-* Repository initialized with a README
-* Regular commits and updates pushed during development
-* GitHub used for:
-
-  * Code management
-  * Collaboration tracking
-  * Automated builds (GitHub Actions)
-
----
 
 ##  Documentation
 
@@ -156,8 +110,7 @@ This README serves as part of the project documentation and includes:
 
 ##  Video Demonstration
 
-A video walkthrough of the app showcasing its features has been created.
- The link is included in this repository (add your YouTube link here).
+Youtube video link:
 
 ---
 
