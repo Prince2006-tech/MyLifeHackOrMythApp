@@ -4,7 +4,6 @@
 
 This Android application was developed to address the common challenge faced by first-year university students in distinguishing practical life hacks from misleading urban myths circulating online.
 
-The app forms part of a mobile development assignment and demonstrates the use of **Kotlin in Android Studio**, along with version control and automated builds using GitHub and GitHub Actions.
 
 ---
 
